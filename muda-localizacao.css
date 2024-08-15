@@ -1,0 +1,85 @@
+/* Reset básico para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #252b3d;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px); /* Altura ajustada para o header e footer */
+    padding: 20px;
+}
+
+.location-form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.location-form h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #252b3d;
+}
+
+.location-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.location-form select,
+.location-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.location-form button {
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.location-form button:hover {
+    background-color: #005bb5;
+}
+
+footer {
+    background-color: #252b3d;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

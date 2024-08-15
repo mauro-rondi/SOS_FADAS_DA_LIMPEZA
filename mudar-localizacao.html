@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudar Localização</title>
+    <link rel="stylesheet" href="muda-localizacao.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    <header>
+        Mudar Localização
+    </header>
+
+    <main>
+        <div class="location-form">
+            <h2>Selecione sua nova localização</h2>
+            <form action="processa-localizacao.html" method="post">
+                <label for="state">Estado:</label>
+                <select id="state" name="state">
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PR">Paraná</option>
+                    <!-- Adicione mais estados conforme necessário -->
+                </select>
+                <label for="zipcode">CEP:</label>
+                <input type="text" id="zipcode" name="zipcode" placeholder="Digite seu CEP">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2024 Nossa Empresa. Todos os direitos reservados.
+    </footer>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-container').innerHTML = data);
+    </script>
+</body>
+</html>

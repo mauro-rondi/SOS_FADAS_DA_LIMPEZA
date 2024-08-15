@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos - Nossa Empresa</title>
+    <link rel="stylesheet" href="quem-somos.css">
+     <!-- Slick Slider CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+<!-- Slick Slider JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    <!-- Inclua o header existente aqui, se necessário -->
+    <header>
+        <!-- Código do seu header -->
+    </header>
+
+    <main>
+        <section class="company-summary">
+            <h1>Sobre Nós</h1>
+            <p>
+                Na área de limpeza doméstica, pós-obra e pós-eventos, disponibilizamos nossos serviços por meio de uma equipe de especialistas capacitados e discretos. 
+                Nosso compromisso é assegurar uma limpeza de excelência, proporcionando um ambiente livre de poeira e sujeiras, através de serviços personalizados e de alta qualidade, voltados para atender às necessidades de cada cliente.
+            </p>
+            <p>
+                Trabalhamos continuamente para inovar e melhorar nossos serviços, garantindo que atendam às suas necessidades e expectativas. Agradecemos a confiança depositada em nós e estamos sempre disponíveis para ouvir suas sugestões e feedbacks.
+            </p>
+
+            <h2>Valores</h2>
+                <ul>
+                    <li><p>Qualidade: Compromisso com a excelência na execução dos serviços, utilizando produtos e métodos de alta qualidade, garantindo a satisfação dos clientes.</p></li>
+                    <li><p>Inovação: Busca constante por soluções inovadoras e tecnológicas para otimizar os serviços e oferecer uma experiência diferenciada aos clientes.</p></li>
+                    <li><p>Transparência: Manter uma comunicação clara e honesta com os clientes, fornecendo informações precisas sobre os serviços e preços.</p></li>
+                    <li><p>Ética: Conduzir os negócios com integridade e respeito, valorizando a confiança e a segurança dos clientes e colaboradores.</p></li>
+                    <li><p>Responsabilidade Social: Promover ações que contribuam para o desenvolvimento social da comunidade.</p></li>
+                    <li><p></p>Foco no Cliente: Priorizar as necessidades e expectativas dos clientes, oferecendo um atendimento personalizado e soluções eficazes.</li>
+                </ul>
+            <h2>Visão</h2>
+            <p>Ser reconhecida como a plataforma líder em serviços de limpeza a domicílio da cidade, oferecendo uma gama completa de soluções inovadoras para a gestão da casa, promovendo a qualidade de vida e o bem-estar dos nossos clientes.</p>
+            <h2>Missão</h2>
+            <p>Oferecer soluções de limpeza personalizadas e eficientes para o lar, proporcionando aos nossos clientes mais tempo livre, ambientes saudáveis e uma experiência prática e confiável por meio de um site inovador.</p>
+        </section>
+
+        <section class="social-media">
+            <h2>Conecte-se Conosco</h2>
+            <p>
+                Siga-nos nas redes sociais para ficar atualizado com as últimas novidades e ofertas.
+            </p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/sos.fadasdalimpeza?igsh=azd4MXVpbnJvMmUx" target="_blank" class="social-icon">
+                    <img src="instagram-icon.png" alt="Instagram">
+                </a>
+                <!-- Adicione mais redes sociais conforme necessário -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nossa Empresa. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-container').innerHTML = data);
+    </script>
+</body>
+</html>
