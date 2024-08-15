@@ -213,8 +213,8 @@ body {
     width: 100%; /* Aumente a largura para ocupar mais espaço */
     max-width: 900px; /* Defina um limite máximo para a largura */
     margin-top: 20px;
-    margin-left: -650px; /* Margem negativa para expandir para a esquerda */
-    margin-right: -50px; /* Margem negativa para expandir para a direita */
+    margin-left: 50%; /* Margem negativa para expandir para a esquerda */
+    margin-right: -10%; /* Margem negativa para expandir para a direita */
     box-sizing: border-box;
 }
 .main-image img {
@@ -232,8 +232,7 @@ body {
     padding: 20px;
     box-sizing: border-box;
     background-color: #f4f4f4; /* Cor de fundo para a área da lista */
-    margin-top: 65px;
-    margin-right: 70px;
+    margin-top: 20%;
 }
 
 .sidebar ul {
@@ -622,9 +621,117 @@ footer {
     text-decoration: underline; /* Sublinha o link ao passar o mouse */
 }
 
-@media screen and (max-width: 768px) {
-    body {
-        width: 100%;
+/* Estilo para telas pequenas (celulares) */
+@media (max-width: 600px) {
+    /* Ajuste o header */
+    header {
         flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .header-icons {
+        margin-left: 0;
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    .location-selector {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* Ajuste o carrossel de imagens */
+    .image-carousel {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Ajuste a imagem principal */
+    .main-image {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Ajuste a barra lateral */
+    .sidebar {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Ajuste os cards */
+    .logo-resumo, .social-card, .preferencial-card {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    /* Ajuste a seção de serviços preferenciais */
+    .preferenciais-section {
+        padding: 10px;
+    }
+
+    .preferenciais {
+        align-items: center;
     }
 }
+
+/* Estilo para tablets */
+@media (min-width: 601px) and (max-width: 992px) {
+    /* Ajuste o header */
+    header {
+        height: auto;
+    }
+
+    .location-selector {
+        font-size: 16px;
+    }
+
+    /* Ajuste o carrossel de imagens */
+    .image-carousel {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    /* Ajuste a barra lateral */
+    .sidebar {
+        width: 30%;
+    }
+
+    /* Ajuste os cards */
+    .logo-resumo, .social-card, .preferencial-card {
+        max-width: 80%;
+    }
+}
+
+/* Estilo para desktops grandes */
+@media (min-width: 993px) {
+    /* Aqui você pode manter ou ajustar ligeiramente os estilos */
+    .header-icons {
+        margin-left: auto;
+        margin-right: 75px;
+    }
+
+    .location-selector {
+        font-size: 20px;
+    }
+
+    .image-carousel {
+        max-width: 1500px;
+    }
+
+    .main-image {
+        max-width: 900px;
+        margin-left: -650px;
+    }
+
+    .sidebar {
+        width: 20%;
+    }
+
+    .logo-resumo, .social-card, .preferencial-card {
+        max-width: 500px;
+    }
+}
+
