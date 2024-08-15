@@ -29,9 +29,10 @@ header {
     text-align: center;
     height: 50px; /* Altura reduzida para 50px */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     box-sizing: border-box; /* Garante que padding e border sejam incluídos na altura total */
+    display: flex;
 }
 
 /* Localização no header */
@@ -130,31 +131,49 @@ main {
 
 /* Estilo da nova seção abaixo do header */
 .main-navigation {
-    background-color: #ffffff; /* Fundo branco normal */
-    padding: 10px 20px; /* Espaçamento interno */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha, se necessário */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #ddd;
 }
 
 /* Estilo do conteúdo do header */
 .header-content {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center; /* Centraliza o conteúdo */
+    width: 100%;
     gap: 20px; /* Espaçamento entre o logo e o menu */
+}
+
+.header-logo {
+    height: auto; /* Mantém a proporção da altura */
+    border-radius: 20%; /* Faz o logo ficar em formato oval */
+    object-fit: cover; /* Ajusta a imagem para cobrir a área oval sem distorção */
+    max-width: 150px; /* Define o máximo tamanho da logo */
+    width: 100%; /* Permite que a logo ajuste seu tamanho conforme o container */
+    height: auto; /* Mantém a proporção da altura */
+    text-align: center; /* Centraliza a logo no container */
 }
 
 /* Estilo do logo */
 .logo img {
-    width: 170px; /* Ajuste a largura do logo conforme necessário */
+    max-width: 150px; /* Define o tamanho máximo da logo */
     height: auto; /* Mantém a proporção da altura */
-    border-radius: 70%; /* Faz o logo ficar em formato oval */
-    object-fit: cover; /* Ajusta a imagem para cobrir a área oval sem distorção */
+    display: block;
+    border-radius: 50%; /* Remover ovalidade para manter formato retangular */
+    object-fit: cover; /* Ajusta a imagem para cobrir a área sem distorção */
+    margin: 0; /* Remove margem adicional */
 }
 
 /* Estilo da navegação */
 nav ul {
     list-style: none; /* Remove marcadores dos itens da lista */
-    margin: 0;
+    margin: 0; /* Remove margem adicional */
     padding: 0;
     display: flex;
     gap: 20px; /* Espaçamento entre os links do menu */
@@ -214,43 +233,43 @@ body {
 
 /* Estilo da imagem principal abaixo do carrossel */
 .main-image {
-    width: 75%; /* Ocupa a largura total do contêiner pai */
-    max-width: 100%; /* Define um tamanho máximo maior para a imagem */
-    height: 20%;
-    padding-right: 1%;
-    margin-left: 40px;
-    box-sizing: border-box;
-    flex: 1;
+    flex: 3; /* Proporção de 3 para a main-image */
+    margin-right: 10px; /* Espaço entre a main-image e a sidebar */
+    margin-left: 100px;
 }
 
 #main-page {
     display: flex;
-    justify-content: space-between; /* Distribui o espaço entre os itens */
-    align-items: flex-start; /* Alinha os itens ao topo */
+    flex-direction: row; /* Itens lado a lado */
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: flex-start; /* Alinhamento superior */
 }
 
 .main-image img {
-    width: 100%; /* Faz com que a imagem ocupe toda a largura do contêiner */
+    width: 100%; /* Ajusta a largura da imagem ao contêiner */
     height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Adiciona bordas arredondadas à imagem */
 }
 
 .main-image, .sidebar {
-    flex: 1; /* Ambos os itens ocupam a mesma largura disponível */
+    flex: 1; /* Ambos ocupam a mesma largura disponível */
+    min-width: 300px; /* Define uma largura mínima para garantir que não fiquem muito pequenos */
+}
+
+#sidebar {
+    flex: 1 1 auto; /* Ajusta a largura da sidebar para ocupar o espaço disponível */
+    max-width: 20%; /* Garante que a sidebar não ocupe mais de 35% da largura disponível */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    padding-left: 50px;
 }
 
 /* Estilo padrão da sidebar */
 .sidebar {
-    top: 0; /* Alinha ao topo da tela quando rola */
-    right: 20px; /* Alinha ao lado direito da tela */
-    background-color: #f4f4f4; /* Cor de fundo para a área da lista */
-    padding: 20px; /* Adiciona algum espaçamento interno */
-    margin-top: 20px; /* Espaço acima da sidebar */
-    box-sizing: border-box; /* Inclui padding e border na largura total */
-    overflow-y: auto; /* Adiciona rolagem vertical se o conteúdo exceder a altura */
-    flex: 1 1 35%; /* Ajusta o tamanho da sidebar em relação à imagem */
-    max-width: 100%; /* Garante que a sidebar não ultrapasse o container */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para efeito de destaque */
+    flex: 1; /* Proporção de 1 para a sidebar */
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .sidebar p {
@@ -285,15 +304,21 @@ body {
     padding: 20px;
     background-color: #f4f4f4; /* Cor de fundo */
     border-radius: 8px; /* Bordas arredondadas */
-    margin-top: 20px;
+    margin: 0 auto;
 }
 
 /* Novo contêiner específico para o card */
 .card-container {
     display: flex; /* Exibe os cards lado a lado */
     justify-content: space-between; /* Espaço uniforme entre os cards */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
     gap: 20px; /* Espaçamento entre os cards */
     padding: 20px; /* Espaçamento interno ao redor dos cards */
+}
+
+.logo-resumo, .social-card, .preferenciais-section {
+    flex: 1 1 100%; /* Cada item ocupa 100% da largura disponível em telas pequenas */
+    margin-bottom: 20px; /* Espaçamento inferior entre os itens */
 }
 
 /* Estilo do card */
@@ -414,6 +439,11 @@ body {
     display: block;
     object-fit: cover; /* Garante que a imagem cubra todo o espaço disponível */
     border-radius: 10px; /* Remove qualquer arredondamento */
+}
+
+.card-image img {
+    max-width: 100%;
+    height: auto;
 }
 
 .section-title {
@@ -724,34 +754,12 @@ img {
 
 /* Ajustes gerais */
 @media (max-width: 768px) {
-    .main-image {
-        width: 100%; /* Ajusta a largura da imagem principal em telas menores */
-        margin-left: 0; /* Remove a margem esquerda */
-    }
-
-    .sidebar {
-        flex: 1 1 100%; /* Ajusta a sidebar para ocupar a largura total */
-        margin-right: 0; /* Remove a margem direita */
-    }
-
     .card-container {
         flex-direction: column; /* Empilha os cards verticalmente em telas menores */
     }
 }
 
 @media (max-width: 768px) {
-    /* Ajustes para telas menores, como tablets e celulares */
-    .main-image {
-        width: 100%; /* Ocupa toda a largura disponível */
-        margin-left: 0; /* Remove a margem esquerda */
-        height: auto; /* Ajusta a altura automaticamente */
-    }
-
-    .sidebar {
-        flex: 1 1 100%; /* Faz a sidebar ocupar toda a largura disponível */
-        margin-top: 20px; /* Adiciona espaço acima da sidebar */
-        right: 0; /* Remove o alinhamento à direita */
-    }
 
     .header-icons {
         margin-right: 20px; /* Ajusta a margem direita */
@@ -770,9 +778,6 @@ img {
 
 @media (max-width: 480px) {
     /* Ajustes para telas de smartphones */
-    .logo img {
-        width: 120px; /* Reduz o tamanho do logo */
-    }
 
     .header-icons {
         gap: 10px; /* Reduz o espaço entre os ícones */
@@ -782,3 +787,132 @@ img {
         gap: 10px; /* Reduz o espaço entre os cards de serviços preferenciais */
     }
 }
+
+@media (max-width: 768px) {
+    /* Ajuste do layout principal para empilhar itens */
+    .header,
+    #main-page,
+    .card-container,
+    .social-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Itens do header */
+    .header-icons,
+    .location-selector {
+        width: 100%; /* Faz os itens ocuparem toda a largura */
+        margin-bottom: 10px; /* Espaçamento entre os itens */
+        text-align: center;
+    }
+
+
+    /* Ajuste dos cards de serviços */
+    .card-container {
+        width: 100%; /* Ocupa toda a largura */
+        margin-bottom: 20px; /* Espaçamento entre os cards */
+    }
+
+    .logo-resumo {
+        width: 100%; /* Card ocupa toda a largura */
+        margin-bottom: 20px; /* Espaçamento abaixo do card */
+    }
+
+    /* Ajuste da seção de redes sociais */
+    .social-card {
+        width: 100%; /* Ocupa toda a largura */
+        margin-bottom: 20px; /* Espaçamento abaixo do card */
+    }
+}
+
+/* Estilo base para a navegação */
+.main-navigation {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que os itens quebrem para a próxima linha, se necessário */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .main-navigation nav ul {
+        flex-wrap: wrap; /* Permite que os itens quebrem de linha */
+        justify-content: center; /* Centraliza os itens na tela menor */
+    }
+
+    .main-navigation nav ul li {
+        flex: 1 1 100%; /* Faz com que os itens ocupem toda a largura disponível */
+        text-align: center;
+    }
+
+    .main-navigation nav ul li a {
+        font-size: 14px;
+    }
+
+    .header-icons .icon img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+}
+
+/* Consultas de mídia para telas menores */
+@media (max-width: 768px) {
+    #main-page {
+        flex-direction: column; /* Alinhar os itens um abaixo do outro */
+    }
+
+    .main-image {
+        margin-right: 0; /* Remover o espaço à direita */
+        margin-bottom: 20px; /* Adicionar espaço abaixo */
+    }
+
+    .sidebar {
+        margin: 0; /* Remover margens laterais */
+    }
+}
+
+/* Consultas de mídia para telas muito pequenas (como smartphones em orientação retrato) */
+@media (max-width: 480px) {
+    #main-page {
+        padding: 10px; /* Reduzir o preenchimento */
+    }
+
+    .main-image {
+        margin-bottom: 15px; /* Ajustar o espaço abaixo */
+    }
+
+    .sidebar {
+        padding: 10px; /* Ajustar o preenchimento da sidebar */
+    }
+}
+
+/* Consultas de mídia para telas menores */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Alinhar os cards em uma coluna em telas menores */
+        gap: 10px; /* Reduzir o espaçamento entre os cards */
+    }
+
+    .preferencial-card {
+        flex: 1 1 100%; /* Cada card ocupa 100% da largura disponível */
+    }
+}
+
+/* Consultas de mídia para telas muito pequenas (como smartphones em orientação retrato) */
+@media (max-width: 480px) {
+    .about-us-section {
+        padding: 10px; /* Reduzir o preenchimento */
+    }
+
+    .logo-resumo, .social-card, .preferenciais-section {
+        margin-bottom: 15px; /* Ajustar o espaço entre os itens */
+    }
+}
+
