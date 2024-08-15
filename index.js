@@ -34,3 +34,4 @@ $(document).ready(function(){
         autoplaySpeed: 3000 /* Velocidade do autoplay */
     });
 });
+

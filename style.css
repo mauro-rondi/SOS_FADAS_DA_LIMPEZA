@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     height: 100%; /* Garante que a altura da página seja 100% */
     margin: 0; /* Remove margens padrão */
@@ -210,10 +214,19 @@ body {
 
 /* Estilo da imagem principal abaixo do carrossel */
 .main-image {
-    width: 100%; /* Ocupa a largura total do contêiner pai */
-    max-width: 1000px; /* Define um tamanho máximo maior para a imagem */
-    margin: 20px auto; /* Adiciona margem superior e inferior, e centraliza horizontalmente */
+    width: 75%; /* Ocupa a largura total do contêiner pai */
+    max-width: 100%; /* Define um tamanho máximo maior para a imagem */
+    height: 20%;
+    padding-right: 1%;
+    margin-left: 40px;
     box-sizing: border-box;
+    flex: 1;
+}
+
+#main-page {
+    display: flex;
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    align-items: flex-start; /* Alinha os itens ao topo */
 }
 
 .main-image img {
@@ -221,14 +234,28 @@ body {
     height: auto; /* Mantém a proporção da imagem */
 }
 
+.main-image, .sidebar {
+    flex: 1; /* Ambos os itens ocupam a mesma largura disponível */
+}
+
+/* Estilo padrão da sidebar */
 .sidebar {
-    position: absolute; /* Posiciona a lista ao lado direito do carrossel */
-    top: 700px; /* Coloca a lista logo abaixo do carrossel */
-    right: 10%; /* Alinha a lista ao lado direito */
-    width: 10%; /* Ajuste conforme necessário */
-    box-sizing: border-box;
+    top: 0; /* Alinha ao topo da tela quando rola */
+    right: 20px; /* Alinha ao lado direito da tela */
     background-color: #f4f4f4; /* Cor de fundo para a área da lista */
-    margin-top: 20%;
+    padding: 20px; /* Adiciona algum espaçamento interno */
+    margin-top: 20px; /* Espaço acima da sidebar */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    overflow-y: auto; /* Adiciona rolagem vertical se o conteúdo exceder a altura */
+    flex: 1 1 35%; /* Ajusta o tamanho da sidebar em relação à imagem */
+    max-width: 100%; /* Garante que a sidebar não ultrapasse o container */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para efeito de destaque */
+}
+
+.sidebar p {
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .sidebar ul {
@@ -654,3 +681,40 @@ footer {
         padding: 5px; /* Reduz ainda mais o padding em telas muito pequenas */
     }
 }
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    .header-icons {
+        margin-top: 10px;
+    }
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+
