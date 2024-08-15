@@ -223,9 +223,9 @@ body {
 
 .sidebar {
     position: absolute; /* Posiciona a lista ao lado direito do carrossel */
-    top: 100%; /* Coloca a lista logo abaixo do carrossel */
-    right: 0; /* Alinha a lista ao lado direito */
-    width: 20%; /* Ajuste conforme necessário */
+    top: 700px; /* Coloca a lista logo abaixo do carrossel */
+    right: 10%; /* Alinha a lista ao lado direito */
+    width: 10%; /* Ajuste conforme necessário */
     box-sizing: border-box;
     background-color: #f4f4f4; /* Cor de fundo para a área da lista */
     margin-top: 20%;
@@ -622,3 +622,35 @@ footer {
     text-decoration: underline; /* Sublinha o link ao passar o mouse */
 }
 
+/* Estilo da section do carrossel */
+#image-carousel-section {
+    width: 100%; /* Garante que a section ocupe toda a largura da tela */
+    margin: 0 auto; /* Centraliza a section horizontalmente */
+    padding: 20px; /* Adiciona algum espaçamento interno */
+    box-sizing: border-box;
+}
+
+/* Estilo do carrossel */
+.image-carousel {
+    width: 100%; /* Faz com que o carrossel ocupe toda a largura da section */
+    margin: 0 auto; /* Centraliza o carrossel */
+}
+
+/* Estilo das imagens do carrossel */
+.image-carousel img {
+    width: 100%; /* Garante que as imagens se ajustem ao contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Responsividade do carrossel */
+@media (max-width: 768px) {
+    #image-carousel-section {
+        padding: 10px; /* Reduz o padding em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    #image-carousel-section {
+        padding: 5px; /* Reduz ainda mais o padding em telas muito pequenas */
+    }
+}
