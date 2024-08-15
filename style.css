@@ -230,6 +230,8 @@ body {
     padding: 20px;
     box-sizing: border-box;
     background-color: #f4f4f4; /* Cor de fundo para a área da lista */
+    margin-top: 65px;
+    margin-right: 70px;
 }
 
 .sidebar ul {
