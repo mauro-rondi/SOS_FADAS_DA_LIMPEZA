@@ -682,39 +682,103 @@ footer {
     }
 }
 
-/* Estilo responsivo */
+/* Responsividade do header */
 @media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        align-items: flex-start;
+    header {
+        flex-direction: column; /* Empilha os itens verticalmente em vez de horizontalmente */
+        height: auto; /* Permite que a altura se ajuste ao conteúdo */
+        padding: 10px; /* Aumenta o padding para maior conforto */
     }
 
-    .nav-menu ul {
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-menu li {
-        margin: 10px 0;
+    .location-selector {
+        margin-left: 0; /* Remove margem esquerda em telas menores */
+        text-align: center; /* Centraliza o texto */
     }
 
     .header-icons {
-        margin-top: 10px;
+        margin-right: 0; /* Remove a margem direita em telas menores */
+    }
+
+    .header-icons .icon {
+        border-left: none; /* Remove a borda esquerda entre os ícones */
     }
 }
 
-/* Estilo responsivo */
+/* Responsividade do footer */
 @media (max-width: 768px) {
     .footer-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Empilha as colunas verticalmente em vez de horizontalmente */
+        padding: 20px; /* Adiciona espaçamento ao redor */
     }
 
     .footer-column {
-        margin: 0;
-        text-align: center;
+        margin: 10px 0; /* Espaçamento vertical entre as colunas */
     }
 }
 
+/* Imagens responsivas */
+img {
+    max-width: 100%; /* Garante que as imagens não ultrapassem o contêiner */
+    height: auto; /* Mantém a proporção das imagens */
+}
 
+/* Ajustes gerais */
+@media (max-width: 768px) {
+    .main-image {
+        width: 100%; /* Ajusta a largura da imagem principal em telas menores */
+        margin-left: 0; /* Remove a margem esquerda */
+    }
+
+    .sidebar {
+        flex: 1 1 100%; /* Ajusta a sidebar para ocupar a largura total */
+        margin-right: 0; /* Remove a margem direita */
+    }
+
+    .card-container {
+        flex-direction: column; /* Empilha os cards verticalmente em telas menores */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajustes para telas menores, como tablets e celulares */
+    .main-image {
+        width: 100%; /* Ocupa toda a largura disponível */
+        margin-left: 0; /* Remove a margem esquerda */
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+
+    .sidebar {
+        flex: 1 1 100%; /* Faz a sidebar ocupar toda a largura disponível */
+        margin-top: 20px; /* Adiciona espaço acima da sidebar */
+        right: 0; /* Remove o alinhamento à direita */
+    }
+
+    .header-icons {
+        margin-right: 20px; /* Ajusta a margem direita */
+    }
+
+    .card-container {
+        flex-direction: column; /* Empilha os cards verticalmente */
+        gap: 10px; /* Reduz o espaço entre os cards */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Empilha as colunas do footer verticalmente */
+        align-items: center; /* Centraliza as colunas */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para telas de smartphones */
+    .logo img {
+        width: 120px; /* Reduz o tamanho do logo */
+    }
+
+    .header-icons {
+        gap: 10px; /* Reduz o espaço entre os ícones */
+    }
+
+    .preferenciais {
+        gap: 10px; /* Reduz o espaço entre os cards de serviços preferenciais */
+    }
+}
