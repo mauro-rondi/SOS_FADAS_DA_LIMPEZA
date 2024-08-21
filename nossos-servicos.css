@@ -45,6 +45,36 @@ body {
     color: #777;
 }
 
+/* Estilo do ícone e mensagem do WhatsApp */
+#whatsapp-chat {
+    position: fixed;
+    bottom: 20px; /* Espaçamento acima do footer */
+    right: 20px;
+    background-color: #25D366; /* Cor do WhatsApp */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    z-index: 1000; /* Garante que o ícone fique acima de outros elementos */
+    gap: 10px; /* Espaçamento entre o ícone e a mensagem */
+}
+
+#whatsapp-chat img {
+    width: 24px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 24px; /* Ajuste o tamanho da imagem conforme necessário */
+    background-color: transparent; /* Garante que o fundo da imagem seja transparente */
+}
+
+#whatsapp-chat span {
+    font-weight: bold;
+    max-width: 150px; /* Define uma largura máxima para o texto */
+    word-wrap: break-word; /* Permite que o texto quebre automaticamente */
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .services {
