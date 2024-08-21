@@ -63,8 +63,8 @@ header {
 }
 
 .header-icons .icon img {
-    width: 35px; /* Ajuste o tamanho das imagens conforme necessário */
-    height: 35px; /* Ajuste o tamanho das imagens conforme necessário */
+    width: 50px; /* Ajuste o tamanho das imagens conforme necessário */
+    height: 50px; /* Ajuste o tamanho das imagens conforme necessário */
     background-color: transparent; /* Garante que o fundo das imagens é transparente */
     object-fit: contain; /* Garante que a imagem mantenha a proporção e ajuste ao tamanho */
 }

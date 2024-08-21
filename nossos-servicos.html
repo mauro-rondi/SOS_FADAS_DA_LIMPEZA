@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços de Limpeza</title>
+    <link rel="stylesheet" href="nossos-servicos.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    <section class="header">
+        <h1>NOSSOS SERVIÇOS</h1>
+        <p>Diversas especialidades no segmento de Limpeza e Cuidados</p>
+    </section>
+    
+
+    <section class="services">
+        <div class="service-card">
+            <img src="limpeza-expressa.jpg" alt="Limpeza Residencial">
+            <h2>Limpeza Expressa</h2>
+            <p>Uma limpeza rápida e eficiente que transforma seu espaço em apenas algumas horas! Ideal para quem precisa de um toque especial antes de receber visitas ou simplesmente quiser renovar sua casa.
+                Limpeza Residencial
+                A limpeza residencial é um serviço profissional que visa deixar a sua casa limpa, organizada e agradável. Nossos especialistas cuidam de cada detalhe, proporcionando um ambiente saudável para você e sua família!.</p>
+        </div>
+        <div class="service-card">
+            <img src="limpeza-residencial.jpg" alt="Limpeza Comercial">
+            <h2>Limpeza Residencial</h2>
+            <p>A limpeza residencial é um serviço profissional que visa deixar a sua casa limpa, organizada e agradável. Nossos especialistas cuidam de cada detalhe, proporcionando um ambiente saudável para você e sua família!</p>
+        </div>
+        <div class="service-card">
+            <img src="limpeza-pesada.jpg" alt="Limpeza Pós-Obra">
+            <h2>Limpeza Pesada</h2>
+            <p>Este serviço caracteriza-se como uma faxina profunda e minuciosa, focada em remover sujeiras incrustadas, manchas persistentes e resíduos difíceis. Envolvendo limpeza em áreas menos acessadas e a higienização completa de ambientes.</p>
+        </div>
+        <div class="service-card">
+            <img src="limpeza-pos-obra.jpg" alt="Limpeza Pós-Obra">
+            <h2>Limpeza Pós-obra</h2>
+            <p>Deixe seu espaço novo brilhando com a nossa limpeza especializada! Nossa equipe de profissionais capacitados removem toda a poeira, sujeira e resíduos deixados pela obra, garantindo que seu ambiente esteja pronto para ser utilizado com conforto e segurança.</p>
+        </div>
+        <div class="service-card">
+            <img src="limpeza-pos-mudanca.jpg" alt="Limpeza Pós-Obra">
+            <h2>Limpeza Pré e Pós-mudança</h2>
+            <p>O serviço de pré-mudança visa deixar seu novo imóvel limpo e organizado. Já o pós-mudança tem foco na eliminação de resíduos e sujeiras deixados no ambiente durante a mudança.</p>
+        </div>
+        <div class="service-card">
+            <img src="limpeza-pos-eventos.jpg" alt="Limpeza Pós-Obra">
+            <h2>Limpeza Pós-Eventos</h2>
+            <p>Você organizou um evento incrível, e agora é hora de encerrar com chave de ouro. Nossa equipe especializada em limpeza pós-evento está aqui para cuidar de todos os detalhes, deixando o local impecável e pronto para a próxima ocasião.</p>
+        </div>
+    </section>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-container').innerHTML = data);
+    </script>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+</body>
+</html>
