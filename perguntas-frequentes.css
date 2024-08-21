@@ -7,7 +7,6 @@ body {
 
 .header {
     background-color: #99B9C8;
-    color: white;
     padding: 20px;
     text-align: center;
     margin-bottom: 35px;
@@ -22,7 +21,6 @@ body {
 
 .faq-item {
     margin-bottom: 20px;
-    color: #D63F64
 }
 
 .faq-question {
@@ -36,7 +34,6 @@ body {
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
-    color: #D63F64
 }
 
 .faq-question:hover {
