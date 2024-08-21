@@ -31,7 +31,7 @@ header {
     color: #D63F64;
     font-size: 14px; /* Define o tamanho da fonte */
     font-weight: bold; /* Aplica negrito ao texto */
-    padding: 5px; /* Padding reduzido para 5px */
+    padding: 25px; /* Padding reduzido para 5px */
     text-align: center;
     height: 50px; /* Altura reduzida para 50px */
     display: flex;
@@ -63,7 +63,7 @@ header {
 }
 
 .header-icons .icon img {
-    width: 50px; /* Ajuste o tamanho das imagens conforme necessário */
+    width: 75px; /* Ajuste o tamanho das imagens conforme necessário */
     height: 50px; /* Ajuste o tamanho das imagens conforme necessário */
     background-color: transparent; /* Garante que o fundo das imagens é transparente */
     object-fit: contain; /* Garante que a imagem mantenha a proporção e ajuste ao tamanho */
@@ -176,8 +176,8 @@ nav ul li a:hover {
     }
 
     .header-icons .icon img {
-        width: 20px;
-        height: 20px;
+        width: 45px;
+        height: 45px;
     }
 
     .logo img {
