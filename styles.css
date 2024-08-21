@@ -90,7 +90,7 @@ main {
     padding: 5px;
     box-sizing: border-box;
     width: 100%;
-    background-color: #ddd;
+    background-color: #6b9ab5;
 }
 
 /* Estilo do conteúdo do header */
@@ -142,7 +142,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none; /* Remove sublinhado dos links */
     color: #252b3d; /* Cor do texto dos links */
-    color: #D63F64;
+    color: white;
     font-weight: bold;
     font-size: 16px; /* Tamanho da fonte */
 }
