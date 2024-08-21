@@ -5,6 +5,11 @@ body {
     background-color: #f4f4f4;
 }
 
+h2 {
+    margin-top: 20px;
+ margin-bottom: 20px;
+}
+
 .header {
     background-color: #99B9C8;
     color: white;
@@ -24,58 +29,66 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 10px;
-    padding: 15px;
-    text-align: center;
+    perspective: 1000px;
     width: 300px;
+    height: 400px;
+    position: relative;
+    cursor: pointer;
 }
 
-.service-card img {
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.6s;
+}
+
+.card-front {
+    background-color: white;
+}
+
+.card-front img {
     width: 100%;
     border-radius: 10px 10px 0 0;
     height: 200px;
     object-fit: cover;
 }
 
-.service-card h2 {
-    color: #333;
-    margin: 15px 0 10px;
-}
-
-.service-card p {
+.card-front p {
     color: #777;
 }
 
-/* Estilo do ícone e mensagem do WhatsApp */
-#whatsapp-chat {
-    position: fixed;
-    bottom: 20px; /* Espaçamento acima do footer */
-    right: 20px;
-    background-color: #25D366; /* Cor do WhatsApp */
+.card-back {
+    background-color: #99B9C8;
     color: white;
-    padding: 10px 15px;
-    border-radius: 25px;
+    transform: rotateY(180deg);
     display: flex;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-size: 14px;
-    z-index: 1000; /* Garante que o ícone fique acima de outros elementos */
-    gap: 10px; /* Espaçamento entre o ícone e a mensagem */
+    flex-direction: column;
+    justify-content: center;
 }
 
-#whatsapp-chat img {
-    width: 24px; /* Ajuste o tamanho da imagem conforme necessário */
-    height: 24px; /* Ajuste o tamanho da imagem conforme necessário */
-    background-color: transparent; /* Garante que o fundo da imagem seja transparente */
+.card-back h1 {
+    color: #D63F64;
 }
 
-#whatsapp-chat span {
-    font-weight: bold;
-    max-width: 150px; /* Define uma largura máxima para o texto */
-    word-wrap: break-word; /* Permite que o texto quebre automaticamente */
+.card-back p {
+    margin-top: 50px;
+    color: #D63F64
 }
 
-/* Responsividade */
+.service-card.flipped .card-front {
+    transform: rotateY(180deg);
+}
+
+.service-card.flipped .card-back {
+    transform: rotateY(360deg);
+}
+
 @media (max-width: 768px) {
     .services {
         flex-direction: column;
@@ -84,11 +97,5 @@ body {
 
     .service-card {
         width: 90%;
-    }
-}
-
-@media (min-width: 769px) {
-    .service-card {
-        width: 30%;
     }
 }
