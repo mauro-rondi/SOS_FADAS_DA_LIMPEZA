@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas Frequentes</title>
+    <link rel="stylesheet" href="perguntas-frequentes.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    <section class="faq-section">
+        <div class="header">
+            <h1>Perguntas Frequentes (FAQ)</h1>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleAnswer(0)">
+                Posso agendar mais de um serviço de limpeza?
+            </button>
+            <div class="faq-answer" id="answer-0">
+                <p>O serviço de limpeza de diarista inclui a limpeza de residências, escritórios e outros espaços, feito por profissionais treinados e contratados por dia.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleAnswer(1)">
+                Preciso pagar passagem e alimentação para as diaristas ?
+            </button>
+            <div class="faq-answer" id="answer-1">
+                <p>Para agendar um serviço de limpeza, basta acessar nossa plataforma, escolher o tipo de serviço, selecionar a data e horário disponíveis e confirmar a reserva.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleAnswer(2)">
+                Como é feito o pagamento da Limpeza?
+            </button>
+            <div class="faq-answer" id="answer-2">
+                <p>Nossos profissionais utilizam produtos de limpeza de alta qualidade, seguros para o meio ambiente e eficazes na remoção de sujeira e manchas.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleAnswer(3)">
+                Como faço para parcelar a limpeza?
+            </button>
+            <div class="faq-answer" id="answer-3">
+                <p>Nossos profissionais utilizam produtos de limpeza de alta qualidade, seguros para o meio ambiente e eficazes na remoção de sujeira e manchas.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleAnswer(4)">
+                Como identifico a diarista que vai realizar o serviço na minha residência?
+            </button>
+            <div class="faq-answer" id="answer-4">
+                <p>Nossos profissionais utilizam produtos de limpeza de alta qualidade, seguros para o meio ambiente e eficazes na remoção de sujeira e manchas.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleAnswer(5)">
+                O que está incluso na limpeza?
+            </button>
+            <div class="faq-answer" id="answer-5">
+                <p>Nossos profissionais utilizam produtos de limpeza de alta qualidade, seguros para o meio ambiente e eficazes na remoção de sujeira e manchas.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleAnswer(6)">
+                Tenho interesse em fazer parte da equipe, como faço?
+            </button>
+            <div class="faq-answer" id="answer-6">
+                <p>Nossos profissionais utilizam produtos de limpeza de alta qualidade, seguros para o meio ambiente e eficazes na remoção de sujeira e manchas.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleAnswer(index) {
+            const answer = document.getElementById('answer-' + index);
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-container').innerHTML = data);
+    </script>
+</body>
+</html>
