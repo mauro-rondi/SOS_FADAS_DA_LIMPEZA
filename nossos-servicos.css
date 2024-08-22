@@ -82,7 +82,7 @@ h2 {
 }
 
 #card-footer {
-    margin-top: 25px;
+    margin-top: 20px;
     color: #D63F64;
 }
 
@@ -91,7 +91,7 @@ h2 {
 }
 
 .card-front img {
-    width: 45%;
+    width: 40%;
     height: auto;
     margin-left: 70px;
 }
