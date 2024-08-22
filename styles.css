@@ -93,6 +93,56 @@ main {
     background-color: #6b9ab5;
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    /* Mostra o botão de menu */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Esconde o menu por padrão */
+    #menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Mostra o menu quando o botão é clicado */
+    #menu.open {
+        display: flex;
+    }
+
+    nav ul {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
 /* Estilo do conteúdo do header */
 .header-content {
     display: flex;

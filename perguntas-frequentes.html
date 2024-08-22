@@ -8,16 +8,20 @@
 </head>
 <body>
     <div id="header-container"></div>
+    <div class="header">
+        <h1>Perguntas Frequentes (FAQ)</h1>
+    </div>
     <section class="faq-section">
         <div class="header">
-            <h1>Perguntas Frequentes (FAQ)</h1>
+            <h2>Olá, posso te ajudar a esclarecer algumas dúvidas?</h2>
+            <h4>Vou apresentar alguns tópicos, mas você também pode ficar a vontade para me chamar no chat online!<h4>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="toggleAnswer(0)">
                 Posso agendar mais de um serviço de limpeza?
             </button>
             <div class="faq-answer" id="answer-0">
-                <p>O serviço de limpeza de diarista inclui a limpeza de residências, escritórios e outros espaços, feito por profissionais treinados e contratados por dia.</p>
+                <p>Sim, você pode agendar quantas limpezas desejar! Ficaremos felizes em ajudar a manter seu espaço sempre limpo e agradável. Basta nos informar as datas e os serviços que você precisa, e nós cuidamos do resto!</p>
             </div>
         </div>
 
@@ -26,7 +30,7 @@
                 Preciso pagar passagem e alimentação para as diaristas ?
             </button>
             <div class="faq-answer" id="answer-1">
-                <p>Para agendar um serviço de limpeza, basta acessar nossa plataforma, escolher o tipo de serviço, selecionar a data e horário disponíveis e confirmar a reserva.</p>
+                <p>Não se preocupe! Nós cuidamos de todos os custos relacionados à nossa equipe, incluindo passagem e alimentação. Assim, você pode ficar tranquilo e aproveitar o resultado do nosso serviço sem preocupações adicionais!</p>
             </div>
         </div>
 
@@ -35,7 +39,7 @@
                 Como é feito o pagamento da Limpeza?
             </button>
             <div class="faq-answer" id="answer-2">
-                <p>Nossos profissionais utilizam produtos de limpeza de alta qualidade, seguros para o meio ambiente e eficazes na remoção de sujeira e manchas.</p>
+                <p>Você pode realizar o pagamento de forma simples e prática! Aceitamos dinheiro, pix e cartão de crédito ou débito. Basta escolher a opção que melhor se adapta a você!</p>
             </div>
         </div>
         <div class="faq-item">
@@ -43,7 +47,7 @@
                 Como faço para parcelar a limpeza?
             </button>
             <div class="faq-answer" id="answer-3">
-                <p>Nossos profissionais utilizam produtos de limpeza de alta qualidade, seguros para o meio ambiente e eficazes na remoção de sujeira e manchas.</p>
+                <p>Dependendo da sua compra você pode parcelar o total em até 12 vezes no seu cartão de crédito.</p>
             </div>
         </div>
         <div class="faq-item">
@@ -51,7 +55,7 @@
                 Como identifico a diarista que vai realizar o serviço na minha residência?
             </button>
             <div class="faq-answer" id="answer-4">
-                <p>Nossos profissionais utilizam produtos de limpeza de alta qualidade, seguros para o meio ambiente e eficazes na remoção de sujeira e manchas.</p>
+                <p>Nossas diaristas são uniformizadas com roupas que possuem a identidade visual da empresa. Assim que o serviço for agendado, você terá acesso ao perfil da diarista, incluindo uma foto e detalhes sobre sua experiência. Garantimos que você se sinta confortável e confiante com a profissional que irá até a sua residência!</p>
             </div>
         </div>
         <div class="faq-item">
@@ -59,7 +63,7 @@
                 O que está incluso na limpeza?
             </button>
             <div class="faq-answer" id="answer-5">
-                <p>Nossos profissionais utilizam produtos de limpeza de alta qualidade, seguros para o meio ambiente e eficazes na remoção de sujeira e manchas.</p>
+                <p>Na limpeza, estão inclusos diversos serviços, como: limpeza de pisos, poeira dos móveis, limpeza de janelas, banheiros, cozinha e organização geral. Se precisar de algum serviço específico ou adicional, é só nos avisar que podemos ajustar conforme suas necessidades!</p>
             </div>
         </div>
         <div class="faq-item">
@@ -67,11 +71,22 @@
                 Tenho interesse em fazer parte da equipe, como faço?
             </button>
             <div class="faq-answer" id="answer-6">
-                <p>Nossos profissionais utilizam produtos de limpeza de alta qualidade, seguros para o meio ambiente e eficazes na remoção de sujeira e manchas.</p>
+                <p>Cadastre-se em nossa plataforma e transforme-se em uma diarista, ou envie seu currículo diretamente para o nosso e-mail <a href="fadasdalimpeza.sos@gmail.com">fadasdalimpeza.sos@gmail.com</a> e faça parte da equipe S.O.S Fadas da Limpeza!</p>
             </div>
         </div>
+        <div class="header">
+            <b>Não esqueça: se você tiver mais alguma dúvida pode me chamar através do botão de WhatsApp que aparece aqui no cantinho. Irei responder o mais rápido possível.
+            Abraços da equipe Fadas da Limpeza</b>
+        </div>
     </section>
-
+    <!-- WhatsApp Icon and Message -->
+    <a href="https://wa.me/559291601604" target="_blank">
+        <div id="whatsapp-chat">
+            <img src="whatsapp-icon.jfif" alt="WhatsApp" id="whatsapp-icon">
+            <span>Clique aqui para conversar com a nossa equipe!</span>
+        </div>
+    </a>
+   
     <script>
         function toggleAnswer(index) {
             const answer = document.getElementById('answer-' + index);
