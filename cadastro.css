@@ -1,0 +1,187 @@
+/* Estilos gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    min-width: 320px;
+    max-width: 1200px;
+    margin: auto; /* Remove margens padrão */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo em uma coluna */
+    justify-content: space-around;
+}
+
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    padding: 20px;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo-cadastro {
+    width: 200px;
+    height: auto;
+    align-items: center;
+    margin-right: 0;
+    margin-left: 120px;
+    border-radius: 50%;
+}
+
+.signup-form {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.signup-form h1 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #D63F64;
+    padding-bottom: 35px;
+}
+
+.signup-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.signup-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #99b9c8;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.signup-form button:hover {
+    background-color: #D63F64;
+}
+
+.signup-form p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.signup-form p a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-form p a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos dos Campos de Endereço */
+.address-fields {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.address-fields legend {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.city-state-zip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.city-state {
+    flex: 1;
+    min-width: 0;
+}
+
+.zip-code {
+    flex: 0 1 150px;
+}
+
+.city-state label, .zip-code label {
+    margin-bottom: 8px;
+}
+
+.city-state input, .zip-code input {
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .logo-cadastro {
+        width: 120px;
+    }
+
+    .signup-form {
+        padding: 20px;
+    }
+
+    .signup-form button {
+        padding: 10px;
+    }
+
+    .city-state-zip {
+        flex-direction: column;
+    }
+
+    .zip-code {
+        flex: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-cadastro {
+        width: 100px;
+    }
+
+    .signup-form {
+        padding: 15px;
+    }
+
+    .signup-form button {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    .city-state-zip {
+        gap: 10px;
+    }
+}
+
