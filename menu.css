@@ -1,0 +1,96 @@
+/* Estilo geral do menu */
+nav#menu {
+    overflow-x: auto; /* Habilita rolagem horizontal quando necessário */
+    overflow-y: hidden; /* Oculta a rolagem vertical */
+    white-space: nowrap; /* Impede quebra de linha */
+    background: #6b9ab5; /* Cor de fundo do menu */
+    padding: 0; /* Remove o padding geral */
+    margin: 0;
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+    width: 100%; /* Garante que o menu ocupe a largura total */
+    position: relative; /* Adiciona contexto para o posicionamento */
+}
+
+/* Estilo para a lista de itens do menu */
+nav#menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo para itens individuais do menu */
+nav#menu li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para links do menu */
+nav#menu a {
+    display: inline-block; /* Garante que os itens fiquem lado a lado */
+    padding: 10px 15px; /* Ajuste o padding conforme necessário */
+    text-decoration: none;
+    color: white; /* Cor do texto do link */
+    white-space: nowrap; /* Impede quebra de linha nos links */
+}
+
+/* Adiciona estilo à barra de rolagem apenas em dispositivos móveis */
+@media (max-width: 768px) {
+    nav#menu {
+        overflow-x: auto; /* Habilita a rolagem horizontal em dispositivos móveis */
+        padding-left: 20px; /* Adiciona um padding à esquerda para evitar corte */
+        padding-right: 20px; /* Adiciona um padding à direita para garantir que o final do menu não seja cortado */
+        box-sizing: content-box; /* Permite que o padding seja adicionado fora do cálculo da largura */
+    }
+
+    nav#menu::-webkit-scrollbar {
+        height: 8px; /* Ajuste a altura da barra de rolagem conforme necessário */
+    }
+
+    nav#menu::-webkit-scrollbar-thumb {
+        background-color: #888; /* Cor da barra de rolagem */
+        border-radius: 4px; /* Bordas arredondadas para a barra de rolagem */
+    }
+
+    nav#menu::-webkit-scrollbar-track {
+        background-color: #f1f1f1; /* Cor de fundo da pista da barra de rolagem */
+    }
+
+    nav#menu ul {
+        flex-direction: row; /* Garante que os itens fiquem lado a lado */
+    }
+
+    nav#menu li {
+        flex: 0 0 auto; /* Garante que os itens não encolham e fiquem lado a lado */
+    }
+
+    nav#menu a {
+        flex: 0 0 auto; /* Garante que os links fiquem lado a lado */
+    }
+
+    #menu {
+        padding-left: 20px; /* Ajuste conforme necessário */
+        box-sizing: border-box; /* Garante que o padding não afete o tamanho do elemento */
+    }
+
+    #menu ul {
+        margin-left: -20px; /* Compensa o padding-left adicionado */
+    }
+}
+
+/* Garantir que em telas maiores, o menu seja exibido corretamente */
+@media (min-width: 769px) {
+    nav#menu {
+        overflow-x: hidden; /* Oculta a rolagem horizontal em telas grandes */
+        padding-left: 0; /* Remove o padding à esquerda em telas grandes */
+        padding-right: 0; /* Remove o padding à direita em telas grandes */
+    }
+
+    nav#menu ul {
+        flex-direction: row; /* Garante que os itens fiquem lado a lado */
+    }
+}
+
+
+
+

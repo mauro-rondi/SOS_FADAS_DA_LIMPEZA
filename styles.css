@@ -93,56 +93,6 @@ main {
     background-color: #6b9ab5;
 }
 
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-}
-
-#menu {
-    display: flex;
-    justify-content: center;
-}
-
-@media (max-width: 768px) {
-    /* Mostra o botão de menu */
-    .menu-toggle {
-        display: block;
-    }
-
-    /* Esconde o menu por padrão */
-    #menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    /* Mostra o menu quando o botão é clicado */
-    #menu.open {
-        display: flex;
-    }
-
-    nav ul {
-        width: 100%;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul li {
-        width: 100%;
-    }
-
-    nav ul li a {
-        display: block;
-        padding: 10px;
-        color: #fff;
-        text-decoration: none;
-    }
-}
-
 /* Estilo do conteúdo do header */
 .header-content {
     display: flex;
@@ -181,7 +131,7 @@ nav ul {
     margin: 0; /* Remove margem adicional */
     padding: 0;
     display: flex;
-    gap: 20px; /* Espaçamento entre os links do menu */
+    gap: 6px; /* Espaçamento entre os links do menu */
 }
 
 nav ul li {
@@ -211,9 +161,9 @@ nav ul li a:hover {
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
+
     .main-navigation nav ul {
-        flex-wrap: wrap; /* Permite que os itens quebrem de linha */
-        justify-content: center; /* Centraliza os itens na tela menor */
+        justify-content:first baseline; /* Centraliza os itens na tela menor */
     }
 
     .main-navigation nav ul li {
