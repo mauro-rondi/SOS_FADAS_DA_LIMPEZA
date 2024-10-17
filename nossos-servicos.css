@@ -7,7 +7,16 @@ body {
 
 h2 {
     margin-top: 20px;
- margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+span {
+    color: #D63F64;
+    font-size: large;
+}
+
+p {
+    margin-top: 10px;
 }
 
 .header {
@@ -82,7 +91,7 @@ h2 {
 }
 
 #card-footer {
-    margin-top: 20px;
+    margin-top: 10px;
     color: #D63F64;
 }
 
